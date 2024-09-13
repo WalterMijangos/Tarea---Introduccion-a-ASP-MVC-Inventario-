@@ -1,0 +1,27 @@
+﻿@{
+	ViewData["Title"] = "Crear Marca";
+}
+
+@model Inventario.Models.Marca
+
+<div class="container mt-5">
+	<h1 class="mb-4">Crear nueva Marca</h1>
+</div>
+
+<div class="card mb-4 mx-4">
+	<div class="card-body">
+		<form id="formularioOperacion" asp-action="CrearMarca" method="post">
+			<div>
+				<label for="nombreMarca" class="form-label">Nombre</label>
+				<input type="text" class="form-control" id="nombreMarca" placeholder="Ingrese el nombre de la Marca" asp-for="Nombre" />
+			</div>
+			<div>
+				<label for="paisOrigen" class="form-label">Pais Origen</label>
+				<input type="text" class="form-control" id="paisOrigen" placeholder="Ingrese el pais de origen" asp-for="PaisOrigen" />
+			</div>
+			<div class="mb-3">
+				<button class="btn btn-primary" id="crear">Crear Marca</button>
+			</div>
+		</form>
+	</div>
+</div>

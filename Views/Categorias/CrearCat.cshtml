@@ -1,0 +1,27 @@
+﻿@{
+	ViewData["Title"] = "Crear Categorias";
+}
+
+@model Inventario.Models.Categoria
+
+<div class="container mt-5">
+	<h1 class="mb-4">Crear nueva Categoria</h1>
+</div>
+
+<div class="card mb-4 mx-4">
+	<div class="card-body">
+		<form id="formularioOperacion" asp-action="CrearCat" method="post">
+			<div>
+				<label for="nombreCategoria" class="form-label">Nombre</label>
+				<input type="text" class="form-control" id="nombreCategoria" placeholder="Ingrese el nombre de la Categoria" asp-for="Nombre" />
+			</div>
+			<div>
+				<label for="descripcionCategoria" class="form-label">Descripcion</label>
+				<input type="text" class="form-control" id="descripcionCategoria" placeholder="Ingrese la descripcion de la Categoria" asp-for="Descripcion" />
+			</div>
+			<div class="mb-3">
+				<button class="btn btn-primary" id="crear">Crear Cliente</button>
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,35 @@
+﻿@{
+	ViewData["Title"] = "Crear Empleado";
+}
+
+@model Inventario.Models.Empleado
+
+<div class="container mt-5">
+	<h1 class="mb-4">Crear nuevo Empleado</h1>
+</div>
+
+<div class="card mb-4 mx-4">
+	<div class="card-body">
+		<form id="formularioOperacion" asp-action="CrearEmplea" method="post">
+			<div>
+				<label for="nombreEmpleado" class="form-label">Nombre Completo</label>
+				<input type="text" class="form-control" id="nombreEmpleado" placeholder="Ingrese el nombre completo del Empleado" asp-for="NombreCompleto " />
+			</div>
+			<div>
+				<label for="nombreCargo" class="form-label">Cargo</label>
+				<input type="text" class="form-control" id="nombreCargo" placeholder="Ingrese el nombre del Cargo" asp-for="Cargo " />
+			</div>
+			<div>
+				<label for="nombreDepartamento" class="form-label">Departamento</label>
+				<input type="text" class="form-control" id="nombreDepartamento" placeholder="Ingrese el nombre del Departamento" asp-for="Departamento  " />
+			</div>
+			<div>
+				<label for="fechaIngreso" class="form-label">Fecha de Ingreso </label>
+				<input type="date" class="form-control" id="fechaIngreso" placeholder="Ingrese la fecha de Ingreso" asp-for="FechaIngreso" />
+			</div>
+			<div class="mb-3">
+				<button class="btn btn-primary" id="crear">Crear Empleado</button>
+			</div>
+		</form>
+	</div>
+</div>

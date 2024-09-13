@@ -1,0 +1,31 @@
+﻿@{
+	ViewData["Title"] = "Crear Cliente";
+}
+
+@model Inventario.Models.Cliente
+
+<div class="container mt-5">
+	<h1 class="mb-4">Crear nuevo Cliente</h1>
+</div>
+
+<div class="card mb-4 mx-4">
+	<div class="card-body">
+		<form id="formularioOperacion" asp-action="CrearCli" method="post">
+			<div>
+				<label for="nombreCliente" class="form-label">Nombre</label>
+				<input type="text" class="form-control" id="nombreCliente" placeholder="Ingrese el nombre completo del Cliente" asp-for="NombreCompleto " />
+			</div>
+			<div>
+				<label for="emailCliente" class="form-label">Email</label>
+				<input type="email" class="form-control" id="emailCliente" placeholder="Ingrese el email del Cliente" asp-for="Email" />
+			</div>
+			<div>
+				<label for="numeroCliente" class="form-label">Numero</label>
+				<input type="" class="form-control" id="numeroCliente" placeholder=" Ingrese el numero del Cliente" asp-for="Numero" />
+			</div>
+			<div class="mb-3">
+				<button class="btn btn-primary" id="crearcli">Crear Cliente</button>
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Categorias";
+}
+@model IEnumerable<Inventario.Models.Categoria>
+
+
+<h1>Categorias</h1>
+<div class="mb-3 mb-3">
+    <a class="btn btn-primary nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="CrearCat">Agregar Categoria</a>
+</div>
+<table class="table">
+
+    <thead>
+        <tr>
+            <td scope="Col">Id</td>
+            <td scope="Col">Nombre</td>
+            <td scope="Col">Descripcion</td>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @foreach (var categoria in Model)
+        {
+            <tr>
+                <th scope="row">@categoria.Id</th>
+                <td>@categoria.Nombre</td>
+                <td>@categoria.Descripcion</td>
+            </tr>
+        }
+    </tbody>
+</table>
